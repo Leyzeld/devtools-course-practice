@@ -2,6 +2,8 @@
 #include "include/huffman_code_app.h"
 #include "include/huffman_code.h"
 
+#include <map>
+
 #include <exception>
 #include <iostream>
 #include <string>
