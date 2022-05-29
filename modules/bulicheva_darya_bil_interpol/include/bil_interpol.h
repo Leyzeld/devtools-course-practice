@@ -8,7 +8,7 @@
 class bilen_interpol {
     std::vector<double> arr;
  public:
-    bilen_interpol();
+    explicit bilen_interpol();
     bilen_interpol(std::vector<double> _arr);
     double interpolate();
     ~bilen_interpol();
