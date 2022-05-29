@@ -9,7 +9,7 @@
 TEST(bilinear_interpolation, default_construct) {
     bilen_interpol bl;
     double res = bl.interpolate();
-    EXPECT_EQ(res,10);
+    EXPECT_EQ(res, 10);
 }
 
 TEST(bilinear_interpolation, test_with_integer) {
