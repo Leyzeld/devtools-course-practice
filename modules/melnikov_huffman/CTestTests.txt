@@ -39,9 +39,9 @@ set_tests_properties(${prefix}test4 PROPERTIES
     PASS_REGULAR_EXPRESSION ""
     LABELS "${MODULE}")
 
-add_test(NAME ${prefix}test4
+add_test(NAME ${prefix}test5
     COMMAND ${APPLICATION} zzzzzzzz)
-set_tests_properties(${prefix}test4 PROPERTIES
+set_tests_properties(${prefix}test5 PROPERTIES
     PASS_REGULAR_EXPRESSION ""
     LABELS "${MODULE}")
 
