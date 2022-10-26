@@ -15,7 +15,7 @@ TEST(Hristina_Motyl_Test, can_create_zero) {
 }
 
 TEST(Hristina_Motyl_Test, сan_сreate_not_a_zero) {
-    double re = -2.0;
+    double re = -1.0;
     double im = 3.0;
 
     ComplexNumber z(re, im);
