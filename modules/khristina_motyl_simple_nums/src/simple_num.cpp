@@ -12,7 +12,7 @@ std::vector<int> simple_numbers::_Calculate(int start, int end) {
     std::vector<bool> info(end + 1, true);
     info[0] = false;
     info[1] = false;
-    for (int i = start; i <= end; i++) {
+    for (int i = 2; i <= end; i++) {
         if (info[i] == true) {
             for (int j = i * i; j <= end; j += i) {
                 info[j] = false;
