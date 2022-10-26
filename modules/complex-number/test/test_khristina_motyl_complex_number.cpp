@@ -1,10 +1,10 @@
-// Copyright 2022 Khristina Motyl
+// Copyright 2022 Khristina_Motyl
 
 #include <gtest/gtest.h>
 
 #include "include/complex_number.h"
 
-TEST(Hristina_Motyl_Test, can_create_zero) {
+TEST(Khristina_Motyl_Test, can_create_zero) {
     double re = 0.0;
     double im = 0.0;
 
@@ -14,7 +14,7 @@ TEST(Hristina_Motyl_Test, can_create_zero) {
     EXPECT_NEAR(im, z.getIm(), 0.01);
 }
 
-TEST(Hristina_Motyl_Test, сan_сreate_not_a_zero) {
+TEST(Khristina_Motyl_Test, сan_сreate_not_a_zero) {
     double re = -1.0;
     double im = 3.0;
 
@@ -24,7 +24,7 @@ TEST(Hristina_Motyl_Test, сan_сreate_not_a_zero) {
     EXPECT_DOUBLE_EQ(im, z.getIm());
 }
 
-TEST(Hristina_Motyl_Test, can_sum) {
+TEST(Khristina_Motyl_Test, can_sum) {
     double re1 = 55.0;
     double im1 = 0.5;
 
@@ -39,7 +39,7 @@ TEST(Hristina_Motyl_Test, can_sum) {
     EXPECT_EQ(1.1, z3.getIm());
 }
 
-TEST(Hristina_Motyl_Test, can_prod) {
+TEST(Khristina_Motyl_Test, can_prod) {
     ComplexNumber num_1(2.0, 5.2);
     ComplexNumber num_2(3.1, 4.0);
     ComplexNumber res;
@@ -50,7 +50,7 @@ TEST(Hristina_Motyl_Test, can_prod) {
     EXPECT_DOUBLE_EQ(24.12, res.getIm());
 }
 
-TEST(Hristina_Motyl_Test, can_substrackt) {
+TEST(Khristina_Motyl_Test, can_substrackt) {
     double re_part1 = 7.0;
     double im_part1 = 1.6;
     double re_part2 = 5.2;
@@ -64,7 +64,7 @@ TEST(Hristina_Motyl_Test, can_substrackt) {
     EXPECT_DOUBLE_EQ(1.5, z3.getIm());
 }
 
-TEST(Hristina_Motyl_Test, can_divis) {
+TEST(Khristina_Motyl_Test, can_divis) {
     double re_part1 = 1.0;
     double im_part1 = 2.0;
     double re_part2 = 3.0;
