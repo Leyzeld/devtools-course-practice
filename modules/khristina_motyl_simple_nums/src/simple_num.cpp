@@ -1,6 +1,7 @@
 // Copyright 2022 Khristina Motyl
 #include <gtest/gtest.h>
 #include <utility>
+#include <vector>
 
 #include "include/simple_num.h"
 
@@ -29,7 +30,8 @@ std::vector<int> simple_numbers::_Calculate(int start, int end) {
 
 void simple_numbers::_Print(int start, int end) {
     std::vector<int> simple_nums = _Calculate(start, end);
-    std::cout << "Simple numbers start: " << start << "  end: " << end << std::endl;
+    std::cout << "Simple numbers start: " << start << "  end: "
+    << end << std::endl;
     std::cout << "{ ";
     for (int i = 0; i < static_cast<int>(simple_nums.size()); i++) {
         std::cout << simple_nums[i] <<" ";
