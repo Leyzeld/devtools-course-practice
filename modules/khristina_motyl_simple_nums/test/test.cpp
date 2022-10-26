@@ -1,5 +1,6 @@
 // Copyright 2022 Khristina Motyl
 #include <gtest/gtest.h>
+#include <vector>
 
 #include "include/simple_num.h"
 
