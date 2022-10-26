@@ -1,10 +1,10 @@
-// Copyright 2022 Ermakov Pavel
+// Copyright 2022 Khristina Motyl
 #include <iostream>
 
 #include "include/betcher_app.h"
 
 int main(int argc, const char* argv[]) {
-  Application app;
+  App app;
   auto output = app(argc, argv);
   std::cout << output << std::endl;
   return 0;
