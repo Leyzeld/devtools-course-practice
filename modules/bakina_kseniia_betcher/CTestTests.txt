@@ -48,11 +48,11 @@ set_tests_properties(${prefix}_run_with_multiple_arguments_2 PROPERTIES
 add_test(NAME ${prefix}_run_with_negative_value
     COMMAND ${APPLICATION} -123456)
 set_tests_properties(${prefix}_run_with_negative_value PROPERTIES
-    PASS_REGULAR_EXPRESSION "Wrong argument number is 1:\below zero"
+    PASS_REGULAR_EXPRESSION "Wrong argument number is 1:"
     LABELS "${MODULE}")
 
 add_test(NAME ${prefix}_run_with_positive_and_negative_values
     COMMAND ${APPLICATION} 8 -7 5)
 set_tests_properties(${prefix}_run_with_positive_and_negative_values PROPERTIES
-    PASS_REGULAR_EXPRESSION "Wrong argument number is 2:\below zero"
+    PASS_REGULAR_EXPRESSION "Wrong argument number is 2:"
     LABELS "${MODULE}")
