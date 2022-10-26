@@ -7,9 +7,10 @@
 #include "include/betcher_app.h"
 
 std::string App::info(const char* app_name) {
-    return std::string{ "Application of Betcher Odd-Even Merge\nUsage: " }
-        + std::string{ app_name }
-    + std::string{ " Input N N N\n        Where N are integers divided with spaces" };
+    return std::string { "Application of Betcher Odd-Even Merge\nUsage: " }
+        + std::string { app_name }
+    + std::string { " Input N N N\n        Where N are integers " }
+    + std::string{ "divided with spaces" };
 }
 
 std::string App::operator()(int argc, const char* argv[]) {
