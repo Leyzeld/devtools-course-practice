@@ -1,79 +1,86 @@
-// Copyright 2022 Khristina_Motyl
+// Copyright 2022 Khristina Motyl
 
 #include <gtest/gtest.h>
 
 #include "include/complex_number.h"
 
-TEST(Test, can_create_zero) {
-    double re = 0.0;
-    double im = 0.0;
+TEST(Khristina_Motyl_Test, Create) {
+    double real = 2.0;
+    double imag = 1.0;
+    ComplexNumber c(real, imag);
 
-    ComplexNumber z(re, im);
-
-    EXPECT_NEAR(re, z.getRe(), 0.01);
-    EXPECT_NEAR(im, z.getIm(), 0.01);
+    EXPECT_DOUBLE_EQ(real, c.getRe());
+    EXPECT_DOUBLE_EQ(imag, c.getIm());
 }
 
-TEST(Test, сan_сreate_not_a_zero) {
-    double re = -1.0;
-    double im = 3.0;
+TEST(Khristina_Motyl_Test, Compare) {
+    double real1 = 3.0;
+    double imag1 = 1.0;
+    ComplexNumber c1(real1, imag1);
 
-    ComplexNumber z(re, im);
+    double real2 = 3.0;
+    double imag2 = 1.0;
+    ComplexNumber c2(real2, imag2);
 
-    EXPECT_DOUBLE_EQ(re, z.getRe());
-    EXPECT_DOUBLE_EQ(im, z.getIm());
+    EXPECT_EQ(c1, c2);
 }
 
-TEST(Test, can_sum) {
-    double re1 = 55.0;
-    double im1 = 0.5;
+TEST(Khristina_Motyl_Test, Sum) {
+    double real1 = 3.0;
+    double imag1 = 1.0;
+    ComplexNumber c1(real1, imag1);
 
-    double re2 = 45.0;
-    double im2 = 0.6;
+    double real2 = 2.0;
+    double imag2 = 1.0;
+    ComplexNumber c2(real2, imag2);
 
-    ComplexNumber z1(re1, im1);
-    ComplexNumber z2(re2, im2);
-    ComplexNumber z3 = z1 + z2;
+    ComplexNumber result = c1 + c2;
 
-    EXPECT_EQ(100, z3.getRe());
-    EXPECT_EQ(1.1, z3.getIm());
+    EXPECT_DOUBLE_EQ(5.0, result.getRe());
+    EXPECT_DOUBLE_EQ(2.0, result.getIm());
 }
 
-TEST(Test, can_prod) {
-    ComplexNumber num_1(2.0, 5.2);
-    ComplexNumber num_2(3.1, 4.0);
-    ComplexNumber res;
+TEST(Khristina_Motyl_Test, Multiply) {
+    double real1 = 2.0;
+    double imag1 = 2.0;
+    ComplexNumber c1(real1, imag1);
 
-    res = num_1 * num_2;
+    double real2 = 3.0;
+    double imag2 = 1.5;
+    ComplexNumber c2(real2, imag2);
 
-    EXPECT_DOUBLE_EQ(-14.6, res.getRe());
-    EXPECT_DOUBLE_EQ(24.12, res.getIm());
+    ComplexNumber result = c1 * c2;
+
+    EXPECT_DOUBLE_EQ(3.0, result.getRe());
+    EXPECT_DOUBLE_EQ(9.0, result.getIm());
 }
 
-TEST(Test, can_substrackt) {
-    double re_part1 = 7.0;
-    double im_part1 = 1.6;
-    double re_part2 = 5.2;
-    double im_part2 = 0.1;
+TEST(Khristina_Motyl_Test, Divide) {
+    double real1 = 2.0;
+    double imag1 = 1.0;
+    ComplexNumber c1(real1, imag1);
 
-    ComplexNumber z1(re_part1, im_part1);
-    ComplexNumber z2(re_part2, im_part2);
-    ComplexNumber z3 = z1 - z2;
+    double real2 = 2.0;
+    double imag2 = 1.0;
+    ComplexNumber c2(real2, imag2);
 
-    EXPECT_DOUBLE_EQ(1.8, z3.getRe());
-    EXPECT_DOUBLE_EQ(1.5, z3.getIm());
+    ComplexNumber result = c1 / c2;
+
+    EXPECT_DOUBLE_EQ(1, result.getRe());
+    EXPECT_DOUBLE_EQ(0, result.getIm());
 }
 
-TEST(Test, can_divis) {
-    double re_part1 = 1.0;
-    double im_part1 = 2.0;
-    double re_part2 = 3.0;
-    double im_part2 = 4.0;
+TEST(Khristina_Motyl_Test, Subtract) {
+    double real1 = 2.0;
+    double imag1 = 2.0;
+    ComplexNumber c1(real1, imag1);
 
-    ComplexNumber z1(re_part1, im_part1);
-    ComplexNumber z2(re_part2, im_part2);
-    ComplexNumber z3 = z1 / z2;
+    double real2 = 3.0;
+    double imag2 = 1.5;
+    ComplexNumber c2(real2, imag2);
 
-    EXPECT_DOUBLE_EQ(0.44, z3.getRe());
-    EXPECT_DOUBLE_EQ(0.08, z3.getIm());
+    ComplexNumber result = c1 - c2;
+
+    EXPECT_DOUBLE_EQ(-1.0, result.getRe());
+    EXPECT_DOUBLE_EQ(0.5, result.getIm());
 }
